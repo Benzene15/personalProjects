@@ -21,7 +21,7 @@ int main()
 		cout<<"A= Add time manually"<<endl;
 		cout<<"Anything else Day is done"<<endl;
 		cin>>whatDo;
-		if(whatDo=='D'){												//recording live time actions with spendingTime func
+		if(whatDo=='D' || whatDo=='d'){												//recording live time actions with spendingTime func
 			spendingTime(lookingAtDog);
 		}else if(whatDo=='S'|| whatDo=='s'){
 			spendingTime(switchTime);		
@@ -97,19 +97,19 @@ void manualTimeAdd(int &lookingAtDog, int &switchTime, int &engineeringTime, int
 	if(timeAddedMin<0 || timeAddedSec<0){
 		cout<<"NAY TO NEGATIVE"<<endl;				
 	}																//make each activity have an adding fuction that adds the input.
-	else if(whatDo=='D'){
+	else if(whatDo=='D' || whatDo=='d'){
 		minSecAdd(lookingAtDog, timeAddedMin, timeAddedSec);
-	}else if(whatDo=='S'){
+	}else if(whatDo=='S' || whatDo=='s'){
 		minSecAdd(switchTime, timeAddedMin, timeAddedSec);	
-	}else if(whatDo=='E'){
+	}else if(whatDo=='E' ||whatDo=='e'){
 		minSecAdd(engineeringTime, timeAddedMin, timeAddedSec);
-	}else if(whatDo=='P'){
+	}else if(whatDo=='P' || whatDo=='p'){
 		minSecAdd(phoneTime, timeAddedMin, timeAddedSec);
-	}else if(whatDo=='H'){
+	}else if(whatDo=='H' || whatDo=='h'){
 		minSecAdd(hangingTime, timeAddedMin, timeAddedSec);
-	}else if(whatDo=='F'){
+	}else if(whatDo=='F' || whatDo=='f'){
 		minSecAdd(eatTime, timeAddedMin, timeAddedSec);
-	}else if(whatDo=='B'){
+	}else if(whatDo=='B' || whatDo=='b'){
 		minSecAdd(bikeTime, timeAddedMin, timeAddedSec);		
 	}
 	else{
